@@ -2,7 +2,7 @@ body {
   background: #232323;
 }
 
-h1 {
+h1, span {
   color: white;
 }
 
