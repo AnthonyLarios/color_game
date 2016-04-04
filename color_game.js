@@ -24,10 +24,19 @@ for (var i = 0; i < squares.length; i++) {
     var clickedColor = this.style.background;
     //compare color of pickedColor
     if(clickedColor === pickedColor) {
-      alert("correct");
+      messageDisplay.textContent = "Correct";
+      changeColors(pickedColor);
     } else {
       this.style.background = "#232323";
-      messageDisplay.textContent = "Try again."
+      messageDisplay.textContent = "Try again"
     }
   });
+}
+
+function changeColors(color) {
+  //loop through all squares
+  for (var i = 0; i < squares.length; i++) {
+  //change each color to match given color
+    squares[i].style.background = color;
+  }
 }
