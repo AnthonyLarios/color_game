@@ -1,9 +1,22 @@
 body {
   background: #232323;
+  margin: 0;
+  font-family: "Montserrat", "Avenir";
 }
 
 h1 {
+  text-align: center;
+  line-height: 1.1;
+  font-weight: normal;
+  text-transform: uppercase;
   color: white;
+  background: steelblue;
+  margin: 0;
+  padding: 20px 0;
+}
+
+#colorDisplay {
+  font-size: 200%;
 }
 
 #container {
