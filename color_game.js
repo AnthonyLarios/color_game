@@ -20,6 +20,10 @@ for(var i = 0; i < modeButtons.length; i++) {
   });
 }
 
+resetButton.addEventListener("click", function() {
+  reset();
+});
+
 function reset() {
   //generate new colors, pick one, and display them
   colors = generateRandomColors(numberOfSquares);
