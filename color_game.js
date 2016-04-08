@@ -6,10 +6,19 @@ var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
-var easyBtn = document.querySelector("#easyBtn");
-var hardBtn = document.querySelector("#hardBtn");
+var modeButtons = document.querySelectorAll(".mode");
 
-easyBtn.addEventListener("click", function () {
+for(var i = 0; i < modeButtons.length; i++) {
+  modeButtons[i].addEventListener("click", function () {
+    for (i = 0; i < modeButtons.length; i++) {
+      modeButtons[i].classList.remove("selected");
+    }
+
+    this.classList.add("selected");
+  });
+}
+
+/*easyBtn.addEventListener("click", function () {
   easyBtn.classList.add("selected");
   hardBtn.classList.remove("selected");
   numberOfSquares = 3;
@@ -38,7 +47,7 @@ hardBtn.addEventListener("click", function () {
     squares[i].style.background = colors[i];
     squares[i].style.display = "block";
   } 
-});
+});*/
 
 resetButton.addEventListener("click", function () {
   //generate new colors, pick one, and display them
