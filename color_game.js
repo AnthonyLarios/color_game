@@ -27,45 +27,19 @@ function reset() {
   colorDisplay.textContent = pickedColor;
   messageDisplay.textContent = "";
   resetButton.textContent = "New Colors";
-
+  //change colors of squares
   for(var i = 0; i < squares.length; i++) {
-
-    squares[i].style.background = colors[i];
-  }
-
-  h1.style.background = "steelblue";
-}
-
-/*easyBtn.addEventListener("click", function () {
-  easyBtn.classList.add("selected");
-  hardBtn.classList.remove("selected");
-  numberOfSquares = 3;
-  colors = generateRandomColors(numberOfSquares);
-  pickedColor = pickColor();
-  colorDisplay.textContent = pickedColor;
-
-  for(var i = 0; i < squares.length; i++) {
+    //show only the needed amount of squares
     if(colors[i]) {
+      squares[i].style.display = "block";
       squares[i].style.background = colors[i];
     } else {
       squares[i].style.display = "none";
     }
   }
-});
 
-hardBtn.addEventListener("click", function () {
-  hardBtn.classList.add("selected");
-  easyBtn.classList.remove("selected");
-  numberOfSquares = 6;
-  colors = generateRandomColors(numberOfSquares);
-  pickedColor = pickColor();
-  colorDisplay.textContent = pickedColor;
-
-  for(var i = 0; i < squares.length; i++) {
-    squares[i].style.background = colors[i];
-    squares[i].style.display = "block";
-  } 
-});*/
+  h1.style.background = "steelblue";
+}
 
 colorDisplay.textContent = pickedColor;
 
