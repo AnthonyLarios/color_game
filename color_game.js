@@ -11,6 +11,18 @@ var modeButtons = document.querySelectorAll(".mode");
 init();
 
 function init() {
+  setupButtons();
+  setupSquares();
+
+  //add event lister for reset button
+  resetButton.addEventListener("click", function() {
+    reset();
+  });
+
+  reset();
+}
+
+function setupButtons() {
   //add event listener for mode buttons
   for(var i = 0; i < modeButtons.length; i++) {
     modeButtons[i].addEventListener("click", function () {
@@ -23,7 +35,9 @@ function init() {
       reset();
     });
   }
+}
 
+function setupSquares() {
   //add event listeners for colored squares
   for (var i = 0; i < squares.length; i++) {
     //add click listeners to squares
@@ -42,13 +56,6 @@ function init() {
       }
     });
   }
-
-  //add event lister for reset button
-  resetButton.addEventListener("click", function() {
-    reset();
-  });
-
-  reset();
 }
 
 function reset() {
